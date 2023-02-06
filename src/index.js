@@ -1,10 +1,10 @@
 const express = require("express");
 const mongoose = require("mongoose");
+mongoose.set('strictQuery', false);
+
 const router = require("./routes/route")
 const app = express();
-
 app.use(express.json());
-
 mongoose
   .connect("mongodb://localhost:27017/assignment", {
     useNewUrlparser: true,
